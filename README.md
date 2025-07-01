@@ -1,66 +1,53 @@
-# 🚀 DevOps Cloud Deployment Pipeline with Jenkins, Docker, Kubernetes, Prometheus & Grafana
+# 🚀 DevOps Cloud Deployment Pipeline using Jenkins, Docker, Kubernetes, Prometheus & Grafana
 
-This project demonstrates a complete DevOps CI/CD pipeline to **automate the build, test, and deployment** process of a Flask application using industry-standard tools like **GitHub**, **Jenkins**, **Docker**, **Kubernetes**, **Prometheus**, and **Grafana** — all hosted on a **cloud-native environment** (like GCP, AWS, or Azure).
-
----
-
-## 📌 Project Goals
-
-- Automate CI/CD with Jenkins
-- Containerize the application using Docker
-- Deploy to Kubernetes cluster
-- Monitor metrics with Prometheus
-- Visualize system health using Grafana
-- Ensure production-grade workflow with real-time deployment and monitoring
+This project demonstrates a complete DevOps CI/CD pipeline to automate the building, testing, containerizing, and deployment of a Flask-based web application. It also includes real-time monitoring using Prometheus and visualization with Grafana — all running on a cloud-native Kubernetes environment such as GCP, AWS, or Azure.
 
 ---
 
-## 🧱 Tech Stack
+## 🧠 Key Objectives
+
+- Automate CI/CD using Jenkins
+- Containerize the Flask app using Docker
+- Deploy the app to a Kubernetes cluster
+- Monitor infrastructure and app metrics using Prometheus
+- Visualize data with Grafana dashboards
+
+---
+
+## 🧰 Tools and Technologies Used
 
 | Tool         | Purpose                                  |
 |--------------|------------------------------------------|
-| GitHub       | Source code management & version control |
-| Jenkins      | Continuous Integration & Delivery        |
-| Docker       | Application containerization             |
-| Kubernetes   | Container orchestration                  |
-| Prometheus   | Monitoring metrics                       |
-| Grafana      | Visualizing metrics                      |
-| Flask        | Sample web application                   |
-| GCP/AWS      | Cloud infrastructure                     |
+| GitHub       | Source control and webhook trigger       |
+| Jenkins      | Orchestration of CI/CD pipeline          |
+| Docker       | Containerization of applications         |
+| Kubernetes   | Cluster orchestration and deployment     |
+| Prometheus   | Monitoring services and metrics          |
+| Grafana      | Dashboard and metric visualization       |
+| Flask        | Python-based sample web app              |
+| Cloud (GCP)  | Cloud environment to host infrastructure |
 
 ---
 
-## 🔧 Pipeline Workflow
+## 📁 Project Structure
 
-1. **Code Commit** – Code is pushed to GitHub
-2. **CI Trigger** – Jenkins polls GitHub and triggers build
-3. **Build Stage** – Jenkins builds Docker image for Flask app
-4. **Test Stage** – Jenkins optionally runs unit tests
-5. **Push to DockerHub** – Docker image is pushed to your Docker repository
-6. **Kubernetes Deployment** – Jenkins deploys latest image to K8s cluster
-7. **Monitoring** – Prometheus scrapes metrics, Grafana visualizes app health
-
----
-
-## 📁 Folder Structure
-
+```plaintext
 devops-cloud-pipeline/
-│
 ├── app/
-│ ├── app.py # Flask app
-│ ├── requirements.txt # Python dependencies
-│ └── Dockerfile # Docker build config
+│   ├── app.py               # Flask web app
+│   ├── requirements.txt     # Python dependencies
+│   └── Dockerfile           # Docker build instructions
 │
 ├── jenkins/
-│ └── Jenkinsfile # Jenkins pipeline script
+│   └── Jenkinsfile          # CI/CD pipeline definition
 │
 ├── k8s/
-│ ├── deployment.yaml # Kubernetes deployment
-│ └── service.yaml # Kubernetes service
+│   ├── deployment.yaml      # Kubernetes deployment config
+│   └── service.yaml         # Kubernetes service definition
 │
 ├── monitoring/
-│ ├── prometheus.yaml # Prometheus config
-│ └── grafana-dashboards/
-│ └── dashboard.json # Grafana dashboard (placeholder)
+│   ├── prometheus.yaml      # Prometheus scrape config
+│   └── grafana-dashboards/
+│       └── dashboard.json   # Sample Grafana dashboard template
 │
-└── README.md
+└── README.md                # Project documentation (this file)
