@@ -44,3 +44,23 @@ This project demonstrates a complete DevOps CI/CD pipeline to **automate the bui
 
 ## 📁 Folder Structure
 
+devops-cloud-pipeline/
+│
+├── app/
+│ ├── app.py # Flask app
+│ ├── requirements.txt # Python dependencies
+│ └── Dockerfile # Docker build config
+│
+├── jenkins/
+│ └── Jenkinsfile # Jenkins pipeline script
+│
+├── k8s/
+│ ├── deployment.yaml # Kubernetes deployment
+│ └── service.yaml # Kubernetes service
+│
+├── monitoring/
+│ ├── prometheus.yaml # Prometheus config
+│ └── grafana-dashboards/
+│ └── dashboard.json # Grafana dashboard (placeholder)
+│
+└── README.md
